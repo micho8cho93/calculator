@@ -1,1 +1,13 @@
 # calculator
+This is the first set of activities in this python course. You will need to apply your knowledge on statements, expressions, operators, and conditionals in order to complete the activities.
+
+# exercises
+There are 3 different exercises in order of difficulty. You must complete calc_v1.py before you can move on to the other exercises. Each exercise comes with #comments that contain the instructions in order to complete the exercises. Once you have followed instructions and completed the exercise, you can test your code to see if it passes all the criteria.
+
+# tests
+Tests are used by real developers in order to check if their code works correctly by applying a range of parameters to each function expecting to see a certain output. The tests will indicate to you how many tests you passed and failed. If you failed any parts, the tests will indicate which function with which parameters failed. Use the fail statements to look into which parts of your code didn't work and try to figure out why.
+
+You can only run a test program if you're using an IDE, like VScode. In order to run a test program type this statement into your CLI in VScode: python -m unittest test_calc_v1.py
+or python3 -m unittest test_calc_v1.py
+
+Make sure you run the same version of test as the exercise (ex: calc_v3.py == test_calc_v3.py)
