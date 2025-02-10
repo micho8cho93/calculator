@@ -1,4 +1,8 @@
 import unittest
+<<<<<<< HEAD
+=======
+from unittest.mock import patch
+>>>>>>> 685b30d (Updated test files and assigned to calc_v1/2/3)
 from calc_v3 import add, subtract, multiply, divide, remainder, exponent, program
 
 class TestCalcSolution3(unittest.TestCase):
@@ -35,6 +39,7 @@ class TestCalcSolution3(unittest.TestCase):
         self.assertEqual(exponent(-1, 1), -1)
         self.assertEqual(exponent(5, 0), 1)
 
+<<<<<<< HEAD
     def test_invalid_choice(self):
         import builtins
         input_values = ['7', 'no']
@@ -68,4 +73,38 @@ class TestCalcSolution3(unittest.TestCase):
         self.assertIn('Invalid input', output)
 
 if __name__ == '__main__':
+=======
+    @patch("builtins.input", side_effect=["1", "2", "3", "no"])  # Simulating addition (1), num1=2, num2=3, then exit
+    @patch("builtins.print")
+    def test_program_addition(self, mock_print, mock_input):
+        program()
+        mock_print.assert_any_call(5)  # Expecting output 2 + 3 = 5
+
+    @patch("builtins.input", side_effect=["4", "10", "2", "no"])  # Division: 10 / 2
+    @patch("builtins.print")
+    def test_program_division(self, mock_print, mock_input):
+        program()
+        mock_print.assert_any_call(5.0)
+
+    @patch("builtins.input", side_effect=["6", "2", "3", "yes", "5", "10", "3", "no"])  
+    @patch("builtins.print")  
+    def test_program_exponent_and_remainder(self, mock_print, mock_input):
+        program()
+        mock_print.assert_any_call(8)  # Expect 2^3 = 8
+        mock_print.assert_any_call(1)  # Expect 10 % 3 = 1
+
+    @patch("builtins.input", side_effect=["7", "no"])  
+    @patch("builtins.print")
+    def test_invalid_choice(self, mock_print, mock_input):
+        program()
+        mock_print.assert_any_call("Invalid input")
+
+    @patch("builtins.input", side_effect=["1", "2", "3", "maybe"])  
+    @patch("builtins.print")
+    def test_invalid_decision(self, mock_print, mock_input):
+        program()
+        mock_print.assert_any_call("Invalid input")
+
+if __name__ == "__main__":
+>>>>>>> 685b30d (Updated test files and assigned to calc_v1/2/3)
     unittest.main()
