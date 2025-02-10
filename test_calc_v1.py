@@ -1,5 +1,11 @@
 import unittest
-from calc_v1 import add, subtract, multiply, divide, remainder, exponent
+from unittest.mock import patch
+import importlib
+import calc_solution1
+
+importlib.reload(calc_solution1)
+
+from calc_solution1 import add, subtract, multiply, divide, remainder, exponent, program
 
 # filepath: /Users/Michel/Desktop/Python Projects/calculator/test_calc_solution1.py
 
@@ -36,6 +42,12 @@ class TestCalcSolution1(unittest.TestCase):
         self.assertEqual(exponent(2, 3), 8)
         self.assertEqual(exponent(-1, 1), -1)
         self.assertEqual(exponent(-1, -1), -1)
+
+    @patch("builtins.input", side_effect=["1", "5", "3"])  # Mock user input: choice=1, num1=5, num2=3
+    @patch("builtins.print")  # Mock print to capture output
+    def test_program_addition(self, mock_print, mock_input):
+        program()  # Run the program function
+        mock_print.assert_called_with(8)  # Since add(5,3) should return 8, assert this was printed
 
 if __name__ == '__main__':
     unittest.main()

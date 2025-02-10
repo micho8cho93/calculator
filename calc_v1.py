@@ -2,16 +2,22 @@
 Follow the instructions below and run the test file whenever you're ready 
 to check if your program is correct."""
 
-#Create a function to return two added numbers
+#Create a function to return two added numbers, function must be called add
 
 
-#Create a function to return two subtracted numbers
+#Create a function to return two subtracted numbers, function must be called subtract
 
 
-#Create a function to return two multiplied numbers
+#Create a function to return two multiplied numbers, function must be called multiply
 
 
-#Create a function to return two divided numbers
+#Create a function to return two divided numbers, function must be called divide
+
+
+#Create a function to return the remainder of two numbers, function must be called remainder
+
+
+#Create a function to return the exponent of two numbers, function must be called exponent
 
 
 

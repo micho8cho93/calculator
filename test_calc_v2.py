@@ -1,5 +1,5 @@
 import unittest
-from calc_v2 import add, subtract, multiply, divide, remainder, exponent, program
+from calc_solution2 import add, subtract, multiply, divide, remainder, exponent, program
 
 class TestCalcSolution2(unittest.TestCase):
 
