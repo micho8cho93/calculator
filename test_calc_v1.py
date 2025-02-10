@@ -1,21 +1,11 @@
 import unittest
 from unittest.mock import patch
 import importlib
-<<<<<<< HEAD
-import calc_solution1
-
-importlib.reload(calc_solution1)
-
-from calc_solution1 import add, subtract, multiply, divide, remainder, exponent, program
-
-# filepath: /Users/Michel/Desktop/Python Projects/calculator/test_calc_solution1.py
-=======
 import calc_v1
 
 importlib.reload(calc_v1)
 
 from calc_v1 import add, subtract, multiply, divide, remainder, exponent, program
->>>>>>> 685b30d (Updated test files and assigned to calc_v1/2/3)
 
 class TestCalcSolution1(unittest.TestCase):
     

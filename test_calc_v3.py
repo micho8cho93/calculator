@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from calc_solution3 import add, subtract, multiply, divide, remainder, exponent, program
+from calc_v3 import add, subtract, multiply, divide, remainder, exponent, program
 
 class TestCalcSolution3(unittest.TestCase):
 
