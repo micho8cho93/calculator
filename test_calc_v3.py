@@ -1,9 +1,6 @@
 import unittest
-<<<<<<< HEAD
-=======
 from unittest.mock import patch
->>>>>>> 685b30d (Updated test files and assigned to calc_v1/2/3)
-from calc_v3 import add, subtract, multiply, divide, remainder, exponent, program
+from calc_solution3 import add, subtract, multiply, divide, remainder, exponent, program
 
 class TestCalcSolution3(unittest.TestCase):
 
@@ -39,41 +36,6 @@ class TestCalcSolution3(unittest.TestCase):
         self.assertEqual(exponent(-1, 1), -1)
         self.assertEqual(exponent(5, 0), 1)
 
-<<<<<<< HEAD
-    def test_invalid_choice(self):
-        import builtins
-        input_values = ['7', 'no']
-        output = []
-
-        def mock_input(s):
-            output.append(s)
-            return input_values.pop(0)
-
-        builtins.input = mock_input
-        builtins.print = lambda s: output.append(s)
-
-        program()
-
-        self.assertIn('Invalid input', output)
-
-    def test_invalid_decision(self):
-        import builtins
-        input_values = ['1', '2', '3', 'maybe']
-        output = []
-
-        def mock_input(s):
-            output.append(s)
-            return input_values.pop(0)
-
-        builtins.input = mock_input
-        builtins.print = lambda s: output.append(s)
-
-        program()
-
-        self.assertIn('Invalid input', output)
-
-if __name__ == '__main__':
-=======
     @patch("builtins.input", side_effect=["1", "2", "3", "no"])  # Simulating addition (1), num1=2, num2=3, then exit
     @patch("builtins.print")
     def test_program_addition(self, mock_print, mock_input):
@@ -106,5 +68,4 @@ if __name__ == '__main__':
         mock_print.assert_any_call("Invalid input")
 
 if __name__ == "__main__":
->>>>>>> 685b30d (Updated test files and assigned to calc_v1/2/3)
     unittest.main()
