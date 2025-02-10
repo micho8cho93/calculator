@@ -46,11 +46,7 @@ def program():
     num2 = float(input('Enter your second number: '))
 
     if choice == '1':
-<<<<<<< HEAD
-        print(subtract(num1, num2))
-=======
         print(add(num1, num2))
->>>>>>> 685b30d (Updated test files and assigned to calc_v1/2/3)
     elif choice == '2':
         print(subtract(num1, num2))
     elif choice == '3':
